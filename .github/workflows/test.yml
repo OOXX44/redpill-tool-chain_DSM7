@@ -53,13 +53,13 @@ jobs:
 #           version: 6.2.4-25556
 #         - platform: ds918p
 #           version: 7.0.1-42218
-#         - platform: ds918p
-#           version: 7.1.0-42661
+         - platform: ds918p
+           version: 7.1.0-42661
 
 #        - platform: ds920p
 #          version: 7.0.1-42218
-        - platform: ds920p
-          version: 7.1.0-42661
+#        - platform: ds920p
+#          version: 7.1.0-42661
 
 #        - platform: dva3221
 #          version: 7.0.1-42218
@@ -119,6 +119,8 @@ jobs:
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/ixgbevf/rpext-index.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/vmxnet3/rpext-index.json
           ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/e1000/rpext-index.json
+          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/mlx4_core/rpext-index.json
+          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/main/mlx5_core/rpext-index.json
       
       - name: 添加扩展驱动[dva3221]
         if: matrix.platform == 'dva3221'
